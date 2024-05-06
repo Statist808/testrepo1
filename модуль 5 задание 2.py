@@ -1,25 +1,27 @@
 class House():
-    """описание дома"""
+    '''описание дома'''
     def __init__(self, street, number):
-      """свойства дома"""
+        '''свойства дома'''
         self.street = street
         self.number = number
 
     def build(self):
-        """сторится дом"""
-        print("дом на улице" + self.street + "под номером" + str(self.number + "построен.")
+        '''строиться дом'''
+        print('дом на улице' + self.street + 'под номером' + self.number + " построен.")
 House1 = House("московская", 20)
-House2 = House("московская", 21)
-    def __dict__(House):
-        return {House}
+House2 = House('московская', 21)
 
+print(House2.number)
 import json
-object = House()
-json.dumps(object.__dict__)
-    with open('1.json', "r") as f:
-        data = json.load(f)
-except FileNotFoundError:
-    data = {}
+
+# Создание словаря
+data = {}
+# Преобразование словаря в JSON-строку
+json_string = json.dumps(data)
+
+# Запись JSON-строки в .json-файл
+with open("data.json", "w") as json_file:
+    json_file.write(json_string)
 
 
 
