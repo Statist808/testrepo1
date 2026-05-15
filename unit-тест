@@ -1,0 +1,10 @@
+import  unittest # импорт библиотеки для юнит-тестиования
+
+def get_sum(num1, num2): #тестируемая функция
+    return  num1 + num2 # возращает сумму двух чисел
+
+class TestSum(unittest.TestCase): # создание класса, который будет содержать методы для тестирования
+    def test_get_sum(self): # метод тестирущий функцию get_sum()
+        self.assertEqual(get_sum(2, 3), 5) # с помощью встроенного метода assertEqual() проверка возращаемого значения
+if __name__ == '__main__': #естли файл не модуль
+    unittest.main() # запуск тестов
